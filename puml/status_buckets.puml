@@ -1,0 +1,33 @@
+@startuml
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+  box Opened #LightGreen
+    participant New order 0 #cornflowerblue
+    participant Backlog order 1 #cornflowerblue
+    participant InProgress order 3 #cornflowerblue
+    participant Hold order 2 #purple
+    participant Standby order 4 #gray
+  end box
+   
+  box Closed #LightGray
+    participant Closed order 5 #red
+  end box
+  
+  New -> Backlog
+  Backlog o<-> Hold
+  Backlog o<-> InProgress
+  Hold o<-> InProgress
+  InProgress ->o Standby
+  Standby -> Closed
+  InProgress -> Closed
+
+legend
+  |=  | **Color Legend** |
+  |<#purple>| Waiting on someone/something else |
+  |<#cornflowerblue>| Waiting on **Me** |
+  |<#gray>| No additional work expected --- Standby |
+  |<#red>| Closed |
+endlegend
+
+@enduml
