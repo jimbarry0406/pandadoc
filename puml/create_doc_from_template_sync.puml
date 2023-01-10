@@ -1,3 +1,5 @@
+@startuml
+
 !theme silver
 
 sprite pdlogo <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,3 +41,5 @@ skinparam responseMessageBelowArrow true
   CustomProgram o-[#red]> PandaDoc : Send
   PandaDoc --[#blue]> User : eMail Notification <&bell>
   PandaDoc <-> User : Sign
+
+@enduml
