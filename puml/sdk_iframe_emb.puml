@@ -1,0 +1,49 @@
+@startuml
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+skinparam responseMessageBelowArrow true
+
+  participant CustomProgram order 1
+  participant PandaDoc order 2
+  actor Recipient order 4
+
+  CustomProgram o-[#red]> PandaDoc : Create <size:32><&document></size>
+
+  autonumber stop
+  PandaDoc -> PandaDoc : Asynchronous Work
+  autonumber resume
+  
+  ==Time==
+  
+  CustomProgram <[#Orange]--o PandaDoc : Webhook [Drafted] Notification <&bell>
+  note right: **//or//**\n  use syncronous\n  polling method
+
+  CustomProgram o-[#red]> PandaDoc : Send w/ Silent
+
+  CustomProgram o-[#red]> PandaDoc : Create Session w/ eMail & TTL
+  autonumber stop
+  CustomProgram <[#red]-- PandaDoc : Session-Id
+  autonumber resume
+
+  CustomProgram -> CustomProgram : Construct Url w/ Session-Id
+  
+  CustomProgram -> CustomProgram : iFrame Url
+
+  group iFramed Url Session
+
+    PandaDoc <[#blue]-> Recipient : PandaDoc Experience
+  
+    autonumber stop
+    Recipient <- Recipient :**>** Enters Data\n**>** Signs Document
+    autonumber resume
+
+    CustomProgram <[#Orange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
+
+  end group
+
+  CustomProgram <[#Orange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>
+
+@enduml
