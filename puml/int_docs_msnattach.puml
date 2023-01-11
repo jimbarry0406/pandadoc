@@ -13,7 +13,7 @@ autonumber
     collections CrmObjects order 3
   end Box
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations <[#red]-o Integrations: pulls Activity Details
     Integrations -[#red]> CrmObjects: Adds Note (Quote or opportunity)
   end

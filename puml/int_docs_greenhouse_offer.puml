@@ -14,7 +14,7 @@ autonumber
     participant Integrations order 6
   end Box
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations o<[#red]- Document : Status Changes (Declined or Completed)
     Offer <--[#red]o Integrations: Update Stage
   end

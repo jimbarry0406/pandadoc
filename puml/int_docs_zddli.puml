@@ -25,7 +25,7 @@ autonumber
 
   PanadaDocAddOn -> Document: Create
   
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Document o-[#red]> Integrations: Status Changes
     Integrations -[#red]> DealLineItems: Update DealLineItems
   end

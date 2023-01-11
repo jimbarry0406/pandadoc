@@ -15,7 +15,7 @@ skinparam responseMessageBelowArrow true
   CustomProgram o-[#red]> PandaDoc : Create
   CustomProgram o-[#red]> PandaDoc : Send w/ Silent
 
-  Group#DarkGray #FFC636 monitor
+  Group#DarkGray #FFF7E3 monitor
   
     PandaDoc -[#blue]>o iPaaS : Trigger - Document Sent from PandaDoc
     PandaDoc <-[#blue]->o iPaaS : Get Document (Details) by Id

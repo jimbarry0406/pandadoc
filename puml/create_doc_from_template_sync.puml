@@ -16,7 +16,7 @@ skinparam responseMessageBelowArrow true
   PandaDoc -> PandaDoc : Asynchronous Work
   autonumber resume
   
-  loop#LightGray #FFC636 until Equals Draft
+  loop#LightGray #FFF7E3 until Equals Draft
     CustomProgram o-[#red]> PandaDoc : Document Status?
  	autonumber stop
    CustomProgram <[#red]-- PandaDoc : [Status]

@@ -24,7 +24,7 @@ autonumber
 
   PanadaDocAddOn -> Document: Create
   
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations o<[#red]- Document : Status Changes (Declined or Completed)
     Opportunity <[#red]-o Integrations : Update Stage
   end

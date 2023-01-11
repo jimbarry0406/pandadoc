@@ -16,7 +16,7 @@ autonumber
   CRM -> PandaDoc : creates document
   PandaDoc <-> User : data entry / signs
   
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     PandaDoc -[#blue]>o iPaaS : document completed trigger <&paperclip>
     iPaaS o[#blue]-> Folders : attach PDF <&paperclip>
   end

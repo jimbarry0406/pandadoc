@@ -12,7 +12,7 @@ autonumber
   CRM -> PandaDoc : creates document
   PandaDoc <-> Recipient : data entry / signs
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     PandaDoc -[#blue]>o iPaaS : document completed trigger
     iPaaS o-[#blue]> CRM : record update action
   end

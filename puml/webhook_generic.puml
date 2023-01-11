@@ -14,7 +14,7 @@ autonumber
   CRMorAPI -> PandaDoc : creates document
   PandaDoc <-> User : data entry / signs
   
-  group#LightGray #FFC636 listen
+  group#LightGray #FFF7E3 listen
     PandaDoc -[#blue]>o CustomProgram : document completed webhook <&paperclip>
     CustomProgram o[#blue]-> Targets : Custom Action(s)
   end

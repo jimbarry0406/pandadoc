@@ -20,7 +20,7 @@ autonumber
   Document --> Document: Send
   Candidate -> Document: Candidate Signs
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations o<[#red]- Document : Status Changes to Complete
     autonumber stop
       CandidateRecord <--[#red]o Integrations: Create new CandidateRecord 

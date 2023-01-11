@@ -15,7 +15,7 @@ autonumber
 
   PandaDoc <-> User : data entry / signs
   
-  group#LightGray #FFC636 connector monitors    
+  group#LightGray #FFF7E3 connector monitors    
     PandaDoc -[#blue]>o msPowerAutomateFlow : document completed trigger
 	PandaDoc <-[#blue]->o msPowerAutomateFlow : fetch PDF <&paperclip>
   end

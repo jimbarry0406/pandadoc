@@ -13,7 +13,7 @@ autonumber
     database Quote order 3
   end Box
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Document -[#red]>o Integrations: Status Changes (Sent or Completed)
     Integrations o-[#red]> Quote: Attach PDF <&paperclip>
   end

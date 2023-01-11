@@ -13,7 +13,7 @@ autonumber
     collections Folders order 3
   end Box
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Document -[#red]>o Integrations: Signed/Finished/Completed <&paperclip>
     Integrations o-[#red]> Folders: Uploads PDF <&paperclip>
   end

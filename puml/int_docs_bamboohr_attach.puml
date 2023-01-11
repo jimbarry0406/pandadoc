@@ -21,7 +21,7 @@ autonumber
   Document --> Document: Send
   Employee -> Document: Employee Signs
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations o<[#red]- Document : Status Changes to Complete
     autonumber stop
     EmployeeRecord <--[#red]o Integrations: Attach PDF 

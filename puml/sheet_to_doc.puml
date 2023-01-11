@@ -11,7 +11,7 @@
 
   User -> Sheet : adds new row
 
-  Group#LightGray #FFC636 monitor
+  Group#LightGray #FFF7E3 monitor
     Sheet -[#blue]>o iPaaS : new row data
     iPaaS o-[#blue]> PandaDoc : trigger template
   end

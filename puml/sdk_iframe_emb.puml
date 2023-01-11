@@ -1,3 +1,8 @@
+
+@startuml 'fonts'
+listfonts
+@enduml
+
 @startuml 'title'
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
@@ -18,7 +23,7 @@ skinparam responseMessageBelowArrow true
   
   ==Time==
   
-  CustomProgram <[#Orange]--o PandaDoc : Webhook [Drafted] Notification <&bell>
+  CustomProgram <[#DarkOrange]--o PandaDoc : Webhook [Drafted] Notification <&bell>
   note right: **//or//**\n  use syncronous\n  polling method
 
   CustomProgram o-[#red]> PandaDoc : Send w/ Silent
@@ -33,7 +38,7 @@ skinparam responseMessageBelowArrow true
   
   CustomProgram -> CustomProgram : iFrame Url
 
-  group iFramed Url Session
+  group#LightGray #FFF7E3 iFramed Url Session
 
     PandaDoc <[#blue]-> Recipient : PandaDoc Experience
   
@@ -41,10 +46,10 @@ skinparam responseMessageBelowArrow true
       Recipient <- Recipient :**>** Enters Data\n**>** Signs Document
     autonumber resume
 
-    CustomProgram <[#Orange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
+    CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
 
   end group
 
-  CustomProgram <[#Orange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>
+  CustomProgram <[#DarkOrange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>
 
 @enduml

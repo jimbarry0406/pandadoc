@@ -14,3 +14,7 @@ endheader
 footer
   <color #177F59>© 2023 PandaDoc Inc. All rights reserved.</color>
 endfooter
+
+skinparam NoteBackgroundColor #E8F2FE
+skinparam NoteFontColor #242424
+skinparam NoteFontName Bradley Hand

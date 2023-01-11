@@ -15,7 +15,7 @@ autonumber
     database EmployeeRecord order 4
   end Box
 
-  group#LightGray #FFC636 monitor
+  group#LightGray #FFF7E3 monitor
     Integrations o<[#red]- EmployeeRecord : New EmployeeRecord Added
     Document <--[#red]o Integrations: Create from [Template] & Send
   end

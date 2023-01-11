@@ -18,7 +18,7 @@ skinparam responseMessageBelowArrow true
 
   ==Time==
   
-  CustomProgram <[#orange]--o PandaDoc : Webhook [Drafted] Notification <&bell>
+  CustomProgram <[#DarkOrange]--o PandaDoc : Webhook [Drafted] Notification <&bell>
 
   CustomProgram o-[#red]> PandaDoc : Send
   PandaDoc -[#blue]-> User : eMail Notification <&bell>
