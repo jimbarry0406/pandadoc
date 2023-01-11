@@ -1,0 +1,21 @@
+@startuml 'title'
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+  Box PandaDoc #LightGray
+    participant DocumentActivity order 1
+    participant Integrations order 2
+  end Box
+
+  Box msDynamics
+    collections CrmObjects order 3
+  end Box
+
+  group#LightGray #FFC636 monitor
+    Integrations <[#red]-o Integrations: pulls Activity Details
+    Integrations -[#red]> CrmObjects: Adds Note (Quote or opportunity)
+  end
+
+@enduml

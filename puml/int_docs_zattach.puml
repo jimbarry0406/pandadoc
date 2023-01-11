@@ -1,0 +1,21 @@
+@startuml 'title'
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+  Box PandaDoc #LightGray
+    participant Document order 1
+    participant Integrations order 2
+  end Box
+
+  Box Zoho
+    database CrmObjects order 3
+  end Box
+
+  group#LightGray #FFC636 monitor
+    Document -[#red]>o Integrations: Status Changes (Sent or Completed)
+    Integrations o-[#red]> CrmObjects: Attach PDF to Deal or Quote <&paperclip>
+  end
+
+@enduml

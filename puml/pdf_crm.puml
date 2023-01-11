@@ -1,4 +1,4 @@
-@startuml 'title'
+@startuml 'title' 
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -9,16 +9,12 @@ autonumber
   actor User order 3
   participant iPaaS order 4
 
-  Box Storage
-    collections Folders order 5
-  end Box
-
   CRM -> PandaDoc : creates document
   PandaDoc <-> User : data entry / signs
-  
+
   group#LightGray #FFC636 monitor
     PandaDoc -[#blue]>o iPaaS : document completed trigger <&paperclip>
-    iPaaS o[#blue]-> Folders : attach PDF <&paperclip>
+    CRM <[#blue]-o iPaaS : attach PDF <&paperclip>
   end
 
 @enduml

@@ -1,4 +1,4 @@
-@startuml
+@startuml 'title'
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -16,6 +16,7 @@ skinparam responseMessageBelowArrow true
   CustomProgram o-[#red]> PandaDoc : Send w/ Silent
 
   Group#DarkGray #FFC636 monitor
+  
     PandaDoc -[#blue]>o iPaaS : Trigger - Document Sent from PandaDoc
     PandaDoc <-[#blue]->o iPaaS : Get Document (Details) by Id
 

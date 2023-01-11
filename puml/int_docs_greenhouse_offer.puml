@@ -1,0 +1,22 @@
+@startuml 'title'
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+  Box Greenhouse
+    actor User order 1
+    database Offer order 2
+  end Box
+
+  Box PandaDoc #LightGray
+    participant Document order 5
+    participant Integrations order 6
+  end Box
+
+  group#LightGray #FFC636 monitor
+    Integrations o<[#red]- Document : Status Changes (Declined or Completed)
+    Offer <--[#red]o Integrations: Update Stage
+  end
+
+@enduml

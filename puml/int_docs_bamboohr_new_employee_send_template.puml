@@ -1,0 +1,25 @@
+@startuml 'title' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+  actor Employee order 1
+
+  Box PandaDoc
+    participant Document order 2
+    participant Integrations order 3
+  end Box
+
+  Box BambooHR #LightGray
+    database EmployeeRecord order 4
+  end Box
+
+  group#LightGray #FFC636 monitor
+    Integrations o<[#red]- EmployeeRecord : New EmployeeRecord Added
+    Document <--[#red]o Integrations: Create from [Template] & Send
+  end
+
+  Employee -> Document: Employee Signs Document
+
+@enduml

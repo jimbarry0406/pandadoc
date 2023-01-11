@@ -1,8 +1,8 @@
-@startuml
+@startuml 'title'
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
-  autonumber
+autonumber
 
   participant CRMorAPI order 1
   participant PandaDoc order 2

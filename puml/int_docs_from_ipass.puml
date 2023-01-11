@@ -1,4 +1,4 @@
-@startuml 'title' 
+ @startuml 'title' 
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -6,24 +6,24 @@ autonumber
   
 skinparam responseMessageBelowArrow true
 
-  participant CustomProgram order 1
+  participant iPaaS order 1
   participant PandaDoc order 2
   actor User order 3
 
-  CustomProgram o-[#red]> PandaDoc : Create <size:32><&document></size>
+  iPaaS o-[#red]> PandaDoc : Create
 
   autonumber stop
-  PandaDoc -> PandaDoc : Asynchronous Work
+    PandaDoc -> PandaDoc : Asynchronous Work
   autonumber resume
   
   loop#LightGray #FFC636 until Equals Draft
-    CustomProgram o-[#red]> PandaDoc : Document Status?
-	autonumber stop
-    CustomProgram <[#red]-- PandaDoc : [Status]
+    iPaaS o-[#red]> PandaDoc : Document Status?
+ 	autonumber stop
+      iPaaS <[#red]-- PandaDoc : [Status]
 	autonumber resume
   end
 
-  CustomProgram o-[#red]> PandaDoc : Send
+  iPaaS o-[#red]> PandaDoc : Send
   PandaDoc --[#blue]> User : eMail Notification <&bell>
   PandaDoc <-> User : Sign
 

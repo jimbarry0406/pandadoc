@@ -1,0 +1,18 @@
+@startuml 'title'
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+
+  Box PandaDoc #LightGray
+    participant Document order 1
+    participant Integrations order 2
+    collections Folders order 3
+  end Box
+
+  group#LightGray #FFC636 monitor
+    Document o-[#red]> Integrations: Status Changes (Sent or Completed)
+    Integrations -[#red]> Folders: Moves Document
+  end
+
+@enduml

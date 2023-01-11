@@ -1,4 +1,4 @@
-@startuml
+@startuml 'title'
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -13,7 +13,7 @@ skinparam responseMessageBelowArrow true
   CustomProgram o-[#red]> PandaDoc : Create <size:32><&document></size>
 
   autonumber stop
-  PandaDoc -> PandaDoc : Asynchronous Work
+    PandaDoc -> PandaDoc : Asynchronous Work
   autonumber resume
   
   ==Time==
@@ -24,8 +24,9 @@ skinparam responseMessageBelowArrow true
   CustomProgram o-[#red]> PandaDoc : Send w/ Silent
 
   CustomProgram o-[#red]> PandaDoc : Create Session w/ eMail & TTL
+
   autonumber stop
-  CustomProgram <[#red]-- PandaDoc : Session-Id
+    CustomProgram <[#red]-- PandaDoc : Session-Id
   autonumber resume
 
   CustomProgram -> CustomProgram : Construct Url w/ Session-Id
@@ -37,7 +38,7 @@ skinparam responseMessageBelowArrow true
     PandaDoc <[#blue]-> Recipient : PandaDoc Experience
   
     autonumber stop
-    Recipient <- Recipient :**>** Enters Data\n**>** Signs Document
+      Recipient <- Recipient :**>** Enters Data\n**>** Signs Document
     autonumber resume
 
     CustomProgram <[#Orange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
