@@ -9,7 +9,7 @@ autonumber
     database Offer order 2
   end Box
 
-  Box PandaDoc #LightGray
+  Box PandaDoc #WhiteSmoke
     participant Document order 5
     participant Integrations order 6
   end Box

@@ -11,7 +11,7 @@ autonumber
     database Quote order 4
   end Box
 
-  Box PandaDoc #LightGray
+  Box PandaDoc #WhiteSmoke
     participant Document order 6
     participant Integrations order 5
   end Box

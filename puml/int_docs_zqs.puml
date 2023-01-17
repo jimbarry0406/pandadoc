@@ -13,7 +13,7 @@ autonumber
     participant PanadaDocAddOn order 6
    end Box
 
-  Box PandaDoc #LightGray
+  Box PandaDoc #WhiteSmoke
     participant Document order 8
     participant Integrations order 7
   end Box

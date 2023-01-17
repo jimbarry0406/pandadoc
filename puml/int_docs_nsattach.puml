@@ -4,18 +4,18 @@
 
 autonumber
 
-  Box PandaDoc #WhiteSmoke
+  Box PandaDoc #LightGray
     participant Document order 1
     participant Integrations order 2
   end Box
 
-  Box Salesforce
-    collections CrmObjects order 3
+  Box Hubspot
+    database Deal order 3
   end Box
 
   group#LightGray #FFF7E3 monitor
     Document -[#red]>o Integrations: Status Changes (Sent or Completed)
-    Integrations o-[#red]> CrmObjects: Attach PDF <&paperclip> (Opportunity Notes & Attachments)
+    Integrations o-[#red]> Deal: Attach PDF <&paperclip>
   end
 
 @enduml
