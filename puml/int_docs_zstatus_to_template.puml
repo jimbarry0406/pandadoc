@@ -9,7 +9,7 @@ autonumber
     participant Document order 1
   end Box
 
-  Box Zapier
+  Box iPaaS
     participant Zap order 3
   end Box
 
