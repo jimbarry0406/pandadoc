@@ -12,24 +12,24 @@ skinparam responseMessageBelowArrow true
   participant PandaDoc order 4
   actor DocOwnerSender order 5
   
-  Recipient -> PandaDoc : Print Document
+  Recipient -> PandaDoc : Print Document <&print>
 
   autonumber stop
-  PandaDoc --> Printer : Electronic Copy <i>(Unsigned)</i>
-  Printer --> Recipient : Physical Copy <i>(Unsigned)</i>
+  PandaDoc --> Printer : Electronic Copy <i>(Unsigned)</i> <&file>
+  Printer --> Recipient : Physical Copy <i>(Unsigned)</i> <&document>
   autonumber resume
 
   Recipient -[#blue]> Recipient : Sign Physical Copy <&pencil>
-  Recipient -> Scanner : Scan Physical Copy
+  Recipient -> Scanner : Scan Physical Copy <&camera-slr>
 
   autonumber stop
-  Scanner --> Recipient : Electronic Copy <i>(Signed)</i>
+  Scanner --> Recipient : Electronic Copy <i>(Signed)</i> <&file>
   autonumber resume
 
   Recipient -> PandaDoc : Upload/Attach Signed Document <&paperclip>
 
-  Recipient -> DocOwnerSender : Manual Notifictaion <&bell>
+  Recipient -> DocOwnerSender : Manual Out-Of-Band Notifictaion <&bell>
 
-  DocOwnerSender -[#red]> PandaDoc : Manually Completes Document
+  DocOwnerSender -[#red]> PandaDoc : Manually Completes Document <&check>
 
 @enduml
