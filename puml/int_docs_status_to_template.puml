@@ -5,8 +5,8 @@
 autonumber
 
   Box PandaDoc #WhiteSmoke
-    participant Template order 2
     participant Document order 1
+    participant Template order 2
     participant Integrations order 3
   end Box
 
