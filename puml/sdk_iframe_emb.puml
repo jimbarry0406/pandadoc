@@ -8,7 +8,7 @@ skinparam responseMessageBelowArrow true
 
   participant CustomProgram order 1
   participant PandaDoc order 2
-  actor Recipient order 4
+  actor User order 4
 
   CustomProgram o-[#red]> PandaDoc : Create <size:32><&document></size>
 
@@ -35,10 +35,10 @@ skinparam responseMessageBelowArrow true
 
   group#LightGray #FFF7E3 iFramed Url Session
 
-    PandaDoc <[#blue]-> Recipient : PandaDoc Experience
+    PandaDoc <[#blue]-> User : PandaDoc Experience
   
     autonumber stop
-      Recipient <- Recipient :**>** Enters Data\n**>** Signs Document
+      User <- User :**>** Enters Data?\n**>** Signs Document?
     autonumber resume
 
     CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
