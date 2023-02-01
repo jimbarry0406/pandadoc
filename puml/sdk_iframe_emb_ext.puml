@@ -9,6 +9,11 @@ skinparam responseMessageBelowArrow true
   participant CustomProgram order 1
   participant PandaDoc order 2
   actor User order 4
+
+skinparam ActorBackgroundColor DarkOrange
+skinparam ActorBorderColor DarkOrange
+skinparam ActorFontColor DarkOrange
+
   actor Recipient order 5
 
   CustomProgram o-[#red]> PandaDoc : Create <size:32><&document></size>
@@ -36,10 +41,10 @@ skinparam responseMessageBelowArrow true
 
   group#LightGray #FFF7E3 iFramed Url Session
 
-    PandaDoc <[#blue]-> User : PandaDoc Experience
+    PandaDoc <[#blue]-> User : PandaDoc Experience //(from iFrame)//
   
     autonumber stop
-      User <- User :**>** Enters Data?\n**>** Signs Document?
+      User <- User :**>** Reviews/Edits/Enters Data\n**>** Signs Document
     autonumber resume
 
     CustomProgram <--[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
@@ -48,10 +53,10 @@ skinparam responseMessageBelowArrow true
 
   PandaDoc o-[#DarkOrange]> Recipient : eMail Notification
 
-  PandaDoc <[#blue]-> Recipient : Recipient Clicks Link (PandaDoc Experience)
+  PandaDoc <[#blue]-> Recipient : PandaDoc Experience //(after Clicking Link)//
   
   autonumber stop
-    Recipient <- Recipient :**>** Enters Data?\n**>** Signs Document?
+    Recipient <- Recipient :**>** Reviews/Edits/Enters Data\n**>** Signs Document
   autonumber resume
 
   CustomProgram <[#DarkOrange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>

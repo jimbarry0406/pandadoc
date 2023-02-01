@@ -38,7 +38,7 @@ skinparam responseMessageBelowArrow true
     PandaDoc <[#blue]-> User : PandaDoc Experience
   
     autonumber stop
-      User <- User :**>** Enters Data?\n**>** Signs Document?
+      User <- User :**>** Reviews/Edits/Enters Data\n**>** Signs Document
     autonumber resume
 
     CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
