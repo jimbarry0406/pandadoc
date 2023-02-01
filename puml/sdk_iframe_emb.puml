@@ -23,7 +23,7 @@ skinparam responseMessageBelowArrow true
 
   CustomProgram o-[#red]> PandaDoc : Send w/ Silent
 
-  CustomProgram o-[#red]> PandaDoc : Create Session w/ eMail & TTL
+  CustomProgram o-[#red]> PandaDoc : Create Session w/ User eMail & TTL
 
   autonumber stop
     CustomProgram <[#red]-- PandaDoc : Session-Id
