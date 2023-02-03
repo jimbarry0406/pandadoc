@@ -14,7 +14,7 @@ autonumber
   
   group#LightGray #FFF7E3 listen
     PandaDoc -[#blue]> CustomProgram : recipient signed webhook <&paperclip>
-	CustomProgram -> CustomProgram : parse fields for Signature Data
+	CustomProgram -> CustomProgram : parse fields for recipient Data
   end
 
 @enduml

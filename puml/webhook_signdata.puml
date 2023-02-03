@@ -13,9 +13,9 @@ autonumber
   PandaDoc <-> User : data entry / signs
   
   group#LightGray #FFF7E3 listen
-    PandaDoc -[#blue]>o CustomProgram : document completed webhook <&paperclip>
+    PandaDoc -[#blue]> CustomProgram : document completed webhook <&paperclip>
 	CustomProgram <-[#blue]-> PandaDoc : get document details
-	CustomProgram -> CustomProgram : parse fields for Signature Data
+	CustomProgram -> CustomProgram : parse fields for signature Data
   end
 
 @enduml
