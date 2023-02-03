@@ -14,7 +14,7 @@ autonumber
   
   group#LightGray #FFF7E3 listen
     PandaDoc -[#blue]>o CustomProgram : document completed webhook <&paperclip>
-	CustomProgram <-[#blue]->o PandaDoc : get document details
+	CustomProgram <-[#blue]-> PandaDoc : get document details
 	CustomProgram -> CustomProgram : parse fields for Signature Data
   end
 
