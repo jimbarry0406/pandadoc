@@ -1,0 +1,57 @@
+@startuml 'title'
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+autonumber
+autonumber stop
+
+skinparam responseMessageBelowArrow true
+
+  database DataSource order 0
+  participant CustomProgram order 1
+  participant PandaDoc order 2
+  actor User order 4
+
+  CustomProgram <[#DarkGreen]-> DataSource : Fetch Data
+
+  autonumber resume
+    CustomProgram -> CustomProgram : **Formatting the JSON request**
+    CustomProgram o-[#red]> PandaDoc : **Create Document from Template**
+  autonumber stop
+
+  PandaDoc -> PandaDoc : Asynchronous Work
+  
+  loop#LightGray #FFF7E3 until Equals Draft
+	autonumber resume
+      CustomProgram o-[#red]> PandaDoc : **Check The Document Status...**
+	autonumber stop
+    CustomProgram <[#red]-- PandaDoc : [Status]
+  end
+
+  autonumber resume
+    CustomProgram o-[#red]> PandaDoc : **Creating Document Link**\n\nSend w/ Silent
+  autonumber stop
+
+  CustomProgram o-[#red]> PandaDoc : Create Session w/ User eMail & TTL
+
+  CustomProgram <[#red]-- PandaDoc : Session-Id
+
+  CustomProgram -> CustomProgram : Construct Url w/ Session-Id
+  
+  autonumber resume
+    CustomProgram -> CustomProgram : Render iFrame (Session)
+  autonumber stop
+
+  group#LightGray #FFF7E3 iFramed Url Session
+
+    PandaDoc <[#blue]-> User : PandaDoc Experience
+  
+    User <- User :**>** Reviews/Edits/Enters Data\n**>** Signs Document
+ 
+    CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
+
+  end group
+
+  CustomProgram <[#DarkOrange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>
+
+@enduml
