@@ -15,7 +15,7 @@ skinparam responseMessageBelowArrow true
   CustomProgram <[#DarkGreen]-> DataSource : Fetch Data
 
   autonumber resume
-    CustomProgram -> CustomProgram : **Formatting the JSON request**
+    CustomProgram -> CustomProgram : **Format the JSON Request**
     CustomProgram o-[#red]> PandaDoc : **Create Document from Template**
   autonumber stop
 
@@ -23,23 +23,23 @@ skinparam responseMessageBelowArrow true
   
   loop#LightGray #FFF7E3 until Equals Draft
 	autonumber resume
-      CustomProgram o-[#red]> PandaDoc : **Check The Document Status...**
+      CustomProgram o-[#red]> PandaDoc : **Check the Document Status...**
 	autonumber stop
     CustomProgram <[#red]-- PandaDoc : [Status]
   end
 
   autonumber resume
-    CustomProgram o-[#red]> PandaDoc : **Creating Document Link**\n\nSend w/ Silent
+    CustomProgram o-[#red]> PandaDoc : **Create Document Link**\n\nSend Document w/ Silent
   autonumber stop
 
-  CustomProgram o-[#red]> PandaDoc : Create Session w/ User eMail & TTL
+  CustomProgram o-[#red]> PandaDoc : Create Session-Id from User eMail
 
   CustomProgram <[#red]-- PandaDoc : Session-Id
 
-  CustomProgram -> CustomProgram : Construct Url w/ Session-Id
+  CustomProgram -> CustomProgram : Construct Session-Id Url
   
   autonumber resume
-    CustomProgram -> CustomProgram : Render iFrame (Session)
+    CustomProgram -> CustomProgram : **Render iFrame (from Session-Id Url)**
   autonumber stop
 
   group#LightGray #FFF7E3 iFramed Url Session
@@ -48,10 +48,9 @@ skinparam responseMessageBelowArrow true
   
     User <- User :**>** Reviews/Edits/Enters Data\n**>** Signs Document
  
-    CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Optional)// <&bell>
-
+    CustomProgram <[#DarkOrange]--o PandaDoc  : JavaScript Events //(Completed)// <&bell>
+	note left: \nredirect to custom url <&link-intact>\n
+	
   end group
-
-  CustomProgram <[#DarkOrange]--o PandaDoc  : Asynchronous Webhook Notifications //(Optional)// <&bell>
 
 @enduml
