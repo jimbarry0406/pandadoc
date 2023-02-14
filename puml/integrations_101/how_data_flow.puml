@@ -1,0 +1,44 @@
+@startuml 'how_call.puml' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+skinparam sequenceMessageAlign center
+
+  Box "UpStreamSystem" #E8F2FE
+    entity CutomProgram order 1
+  end Box
+
+  Box "PandaDoc" #EAEFEB
+    queue API order 2
+	participant Templates order 3
+	participant Documents order 4
+	queue Notifications order 5
+  end Box
+
+  Box "DownStreamSystem" #F5F1EE
+    entity Webhook order 6
+  end Box
+
+	CutomProgram x-[#red]>o API : **INBOUND**
+	  note left #yellow
+	    **CALLING**
+	  end note
+	  note right #yellow
+	    **LISTENING**
+	  end note
+
+	API o--[#orange]> Templates
+	Templates --[#orange]> Documents
+	API o--[#orange]> Documents
+	Documents --[#orange]> Notifications : Status Change <&bell>
+
+	Notifications x-[#red]>o Webhook : **OUTBOUND**
+	  note left #yellow
+	    **CALLING**
+	  end note
+	  note right #yellow
+	    **LISTENING**
+	  end note
+
+@enduml
+

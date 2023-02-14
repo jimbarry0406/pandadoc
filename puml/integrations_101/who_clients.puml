@@ -1,0 +1,15 @@
+@startuml 'who_clients.puml' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+  Box "Client" #E8F2FE
+    participant CustomProgram order 1
+  end Box
+
+  Box "PandaDoc" #EAEFEB
+    participant API order 2	
+  end Box
+
+	CustomProgram o-[#red]> API : REST Call
+
+@enduml
