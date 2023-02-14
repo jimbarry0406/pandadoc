@@ -2,32 +2,35 @@
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
-  box Opened #LightGreen
+!theme  metal
+
+  box Opened #EAEFEB
     participant New order 0 #cornflowerblue
     participant Backlog order 1 #cornflowerblue
-    participant InProgress order 3 #cornflowerblue
-    participant Hold order 2 #purple
-    participant Standby order 4 #gray
+    participant Hold order 2 #EBE5F3
+    participant InProgress order 3 #47B972
+    participant Standby order 4 #Gainsboro
   end box
    
-  box Closed #LightGray
-    participant Closed order 5 #red
+  box Closed #WhiteSmoke
+    participant Closed order 5 #Red
   end box
   
   New -> Backlog
-  Backlog o<-> Hold
-  Backlog o<-> InProgress
-  Hold o<-> InProgress
-  InProgress ->o Standby
+  Backlog <-> Hold
+  Backlog <-> InProgress
+  Hold <-> InProgress
+  InProgress <-> Standby
   Standby -> Closed
   InProgress -> Closed
 
 legend
-  |=  | **Color Legend** |
-  |<#purple>| Waiting on someone/something else |
-  |<#cornflowerblue>| Waiting on **Me** |
-  |<#gray>| No additional work expected --- Standby |
-  |<#red>| Closed |
+  |=  | **Color Legend** | **Bucket(s)** |
+  |<#cornflowerblue>| Waiting on **Me** | New, Backlog |
+  |<#EBE5F3>| Waiting on someone/something else | Hold |
+  |<#47B972>| In-Progress | In-Progress |
+  |<#Gainsboro>| No additional work expected | Standby |
+  |<#Red>| Closed | Closed |
 endlegend
 
 @enduml

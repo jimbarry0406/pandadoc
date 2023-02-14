@@ -1,0 +1,26 @@
+@startuml 'how_inbound.puml' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+  Box "UpStream" #E8F2FE
+    participant CutomProgram order 1
+  end Box
+
+  Box "PandaDoc" #EAEFEB
+    participant API order 2
+	participant Templates order 3
+	participant Documents order 4
+	participant Notifications order 5
+  end Box
+
+  Box "DownStream" #F5F1EE
+    participant Webhook order 6
+  end Box
+
+	CutomProgram -[#red]> API : **INBOUND**
+	API o--[#orange]> Templates
+	API o--[#orange]> Documents
+	Documents --[#orange]> Notifications : Status Change
+	Notifications -[#red]>o Webhook : **OUTBOUND**
+
+@enduml
