@@ -1,0 +1,17 @@
+@startuml 'how_pandadoc_parts.puml' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+!theme amiga
+
+folder "Template" {
+  [**StaticContent**\n//abc//...]
+  [Roles]
+  cloud {
+    [FillableFields]
+    [Variables]
+  }
+}
+
+@enduml
+
