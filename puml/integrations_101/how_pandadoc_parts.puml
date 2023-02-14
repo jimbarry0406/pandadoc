@@ -5,11 +5,11 @@
 !theme amiga
 
 folder "Template" {
-  [**StaticContent**\n//abc//...]
-  [Roles]
+  [**StaticContent**\nabc\nabc\n...\nabc\n]
+  [**Roles**]
   cloud {
-    [FillableFields]
-    [Variables]
+    data --> [FillableFields]
+    data --> [Variables]
   }
 }
 

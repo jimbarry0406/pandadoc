@@ -1,4 +1,4 @@
-@startuml 'how_datda_flow.puml' 
+@startuml 'how_pandadoc.puml' 
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -18,12 +18,12 @@ skinparam sequenceMessageAlign center
     database DownStreamData order 5
   end Box
 
-	UpStreamData x-[#red]>o Templates : **INBOUND**\n//<data/>//
+	UpStreamData -[#red]> Templates : **INBOUND**\n//<data/>//
 
 	Templates --[#orange]> Documents
 	Documents --[#orange]> Notifications : Status Change <&bell>
 
-	Notifications x-[#red]>o DownStreamData : **OUTBOUND**\n//<data/>//
+	Notifications -[#red]> DownStreamData : **OUTBOUND**\n//<data/>//
 
 @enduml
 
