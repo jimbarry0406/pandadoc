@@ -1,4 +1,4 @@
-@startuml 'how_call.puml' 
+@startuml 'how_datda_flow.puml' 
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
@@ -16,7 +16,7 @@ skinparam sequenceMessageAlign center
   end Box
 
   Box "DownStreamSystem" #F5F1EE
-    entity Webhook order 6
+    entity CustomWebhook order 6
   end Box
 
 	CutomProgram x-[#red]>o API : **INBOUND**
@@ -32,7 +32,7 @@ skinparam sequenceMessageAlign center
 	API o--[#orange]> Documents
 	Documents --[#orange]> Notifications : Status Change <&bell>
 
-	Notifications x-[#red]>o Webhook : **OUTBOUND**
+	Notifications x-[#red]>o CustomWebhook : **OUTBOUND**
 	  note left #yellow
 	    **CALLING**
 	  end note
