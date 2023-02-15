@@ -9,7 +9,7 @@ skinparam NoteFontColor #47B972
 skinparam NoteFontName Arial
 
 folder "Template" {
-  [**StaticContent**\nabc\nabc\nabc]
+  [**StaticContent**\nabc\nabc]
   [**Roles**]
   [**Settings**]
   cloud {
