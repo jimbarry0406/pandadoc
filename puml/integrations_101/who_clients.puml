@@ -2,6 +2,8 @@
 
 !include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
 
+skinparam sequenceMessageAlign center
+
   Box Client #E8F2FE
     participant CustomProgram order 1
   end Box
@@ -10,6 +12,6 @@
     participant API order 2	
   end Box
 
-  CustomProgram o-[#red]> API : REST Call
+  CustomProgram o-[#red]> API : **Inbound**\n//(Data)//<&paperclip>
 
 @enduml
