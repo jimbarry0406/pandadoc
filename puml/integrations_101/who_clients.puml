@@ -10,6 +10,6 @@
     participant API order 2	
   end Box
 
-	CustomProgram o-[#red]> API : REST Call
+  CustomProgram o-[#red]> API : REST Call
 
 @enduml
