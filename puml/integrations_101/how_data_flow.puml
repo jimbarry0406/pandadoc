@@ -26,7 +26,7 @@ skinparam sequenceMessageAlign center
 	  note right #yellow
 	    **LISTENING**
 	  end note
-
+	
 	API o--[#orange]> Templates
 	Templates --[#orange]> Documents
 	API o--[#orange]> Documents
