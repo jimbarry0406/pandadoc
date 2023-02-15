@@ -9,25 +9,16 @@ skinparam NoteFontColor #47B972
 skinparam NoteFontName Arial
 
 folder "API" {
-  [**Authentication**\nAPI-Key\nOAuth 2.0 Bearer Token]
+  [**Authentication**\nAPI-Key, or\nOAuth Bearer Token]
   cloud {
     [**Documents**]
-      note bottom #FFF7E3
-        inside Text Blocks, 
-        using brackets syntax 
-        [//VariableName//]
-      end note
     [**Templates**]
-      note bottom #FFF7E3 
-        List,
-		Details,
-		Delete
-      end note
     [**Contacts**]
     [**Forms**]
     [**Folders**]
     [**API-Logs**]
     [**CLI**]
+	[**Workspace**]
   }
 }
 
