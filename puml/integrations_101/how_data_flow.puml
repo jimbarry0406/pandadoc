@@ -4,18 +4,18 @@
 
 skinparam sequenceMessageAlign center
 
-  Box "UpStreamSystem" #E8F2FE
+  Box UpStreamSystem #E8F2FE
     entity Program order 1
   end Box
 
-  Box "PandaDoc" #EAEFEB
+  Box PandaDoc #EAEFEB
     queue API order 2
 	participant Templates order 3
 	participant Documents order 4
 	queue Notifications order 5
   end Box
 
-  Box "DownStreamSystem" #F5F1EE
+  Box DownStreamSystem #F5F1EE
     entity CustomWebhook order 6
   end Box
 

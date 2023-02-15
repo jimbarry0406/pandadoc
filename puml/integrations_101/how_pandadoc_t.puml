@@ -8,11 +8,11 @@ skinparam NoteBackgroundColor #FFF7E3
 skinparam NoteFontColor #47B972
 skinparam NoteFontName Arial
 
-folder "Template" {
+folder Template {
   [**StaticContent**\nabc\nabc]
   [**Roles**]
   [**Settings**]
-  cloud {
+  cloud Placeholders {
     data --> [**Variables**]
       note bottom #FFF7E3
         inside Text Blocks, 
@@ -29,7 +29,7 @@ folder "Template" {
 	  end note
     data --> [**SmartLogic**]
       note bottom #FFF7E3
-        **if** //<this>// **then** //<that>//
+        **if** //<this>// **then show** //<that>//
       end note
   }
 }

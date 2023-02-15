@@ -8,17 +8,18 @@ skinparam NoteBackgroundColor #FFF7E3
 skinparam NoteFontColor #47B972
 skinparam NoteFontName Arial
 
-folder "API" {
+folder API {
   [**Authentication**\nAPI-Key, or\nOAuth Bearer Token]
-  cloud {
+  cloud Targets {
     [**Documents**]
     [**Templates**]
     [**Contacts**]
     [**Forms**]
     [**Folders**]
-    [**API-Logs**]
+	[**Webhooks**]
     [**CLI**]
 	[**Workspace**]
+    [**Integration-Logs**]
   }
 }
 
