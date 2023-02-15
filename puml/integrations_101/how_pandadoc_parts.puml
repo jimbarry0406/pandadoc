@@ -4,12 +4,33 @@
 
 !theme amiga
 
+skinparam NoteBackgroundColor #FFF7E3
+skinparam NoteFontColor #47B972
+skinparam NoteFontName Arial
+
 folder "Template" {
   [**StaticContent**\nabc\nabc\n...\nabc\n]
   [**Roles**]
+  [**Settings**]
   cloud {
-    data --> [FillableFields]
-    data --> [Variables]
+    data --> [**Variables**]
+      note bottom #FFF7E3
+        inside Text Blocks, 
+        using brackets syntax 
+        [//VariableName//]
+      end note
+    data --> [**FillableFields**]
+	  note bottom #FFF7E3
+		<&arrow-circle-right> Text
+		<&arrow-circle-right> Date
+		<&arrow-circle-right> CheckBox
+		<&arrow-circle-right> RadioButtons
+		<&arrow-circle-right> DropDown
+	  end note
+    data --> [**SmartLogic**]
+      note bottom #FFF7E3
+        **if** //<this>// **then** //<that>//
+      end note
   }
 }
 

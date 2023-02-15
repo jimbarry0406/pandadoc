@@ -5,7 +5,7 @@
 skinparam sequenceMessageAlign center
 
   Box "UpStreamSystem" #E8F2FE
-    entity CutomProgram order 1
+    entity Program order 1
   end Box
 
   Box "PandaDoc" #EAEFEB
@@ -19,7 +19,7 @@ skinparam sequenceMessageAlign center
     entity CustomWebhook order 6
   end Box
 
-	CutomProgram x-[#red]>o API : **INBOUND**
+	Program x-[#red]>o API : **INBOUND**
 	  note left #yellow
 	    **CALLING**
 	  end note
