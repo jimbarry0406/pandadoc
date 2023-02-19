@@ -14,10 +14,10 @@ database SaaS {
 database OnPremise {
 }
 
-cloud iPaaS {
- artifact Workflows#gray {
- [workflowN]
- [workflow1]
+cloud iPaaS#Black {
+ artifact Workflows#Gray {
+ [workflow-//N//]#DarkGray
+ [workflow-1]#DarkGray
  }
 }
 
