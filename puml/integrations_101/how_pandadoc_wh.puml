@@ -17,7 +17,7 @@ skinparam NoteFontName Arial
     entity CustomWebhook order 6
   end Box
 
-  Documents o-[#orange]> Notifications : Event <&bell>
+  Documents o-[#red]> Notifications : Event <&bell>
     note left #FFF7E3
 		<&arrow-circle-right> **document_state_changed**//, or//
 		<&arrow-circle-right> **recipient_completed**//, or//
@@ -25,6 +25,6 @@ skinparam NoteFontName Arial
 		<&arrow-circle-right> document_deleted//, or//
 		<&arrow-circle-right> document_creation_failed
 	end note
-  Notifications --[#red]>o CustomWebhook : **JSON**\n//(Data)//<&paperclip>
+  Notifications --[#orange]>o CustomWebhook : **JSON**\n//(Data)//<&paperclip>
 
 @enduml

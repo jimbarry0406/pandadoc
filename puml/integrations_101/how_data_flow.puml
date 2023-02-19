@@ -4,7 +4,7 @@
 
 skinparam sequenceMessageAlign center
 
-  Box UpStreamSystem #E8F2FE
+  Box Up-Stream System #E8F2FE
     entity Program order 1
   end Box
 
@@ -15,7 +15,7 @@ skinparam sequenceMessageAlign center
 	queue Notifications order 5
   end Box
 
-  Box DownStreamSystem #F5F1EE
+  Box Down-Stream System #F5F1EE
     entity CustomWebhook order 6
   end Box
 

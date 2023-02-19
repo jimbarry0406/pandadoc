@@ -4,26 +4,26 @@
 
 skinparam sequenceMessageAlign center
 
-  Box UpStreamSystem #E8F2FE
+  Box Up-Stream System #E8F2FE
     database UpStreamData order 1
   end Box
 
   Box PandaDoc #EAEFEB
 	queue Templates order 2
 	participant Documents order 3
-	queue Notifications order 4
+	queue WebHooks order 4
   end Box
 
-  Box DownStreamSystem #F5F1EE
+  Box Down-Stream System #F5F1EE
     database DownStreamData order 5
   end Box
 
 	UpStreamData -[#red]> Templates : **INBOUND**\n//(Data)//<&paperclip>
 
 	Templates --[#orange]> Documents
-	Documents --[#orange]> Notifications : Status Change <&bell>
+	Documents --[#orange]> WebHooks : Status Change <&bell>
 
-	Notifications -[#red]> DownStreamData : **OUTBOUND**\n//(Data)//<&paperclip>
+	WebHooks -[#red]> DownStreamData : **OUTBOUND**\n//(Data)//<&paperclip>
 
 @enduml
 
