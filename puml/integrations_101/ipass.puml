@@ -1,0 +1,36 @@
+@startuml 'how_pandadoc_parts.puml' 
+
+!include https://raw.githubusercontent.com/jimbarry0406/pandadoc/main/puml/pandadoc_defaults.puml
+
+!theme amiga
+
+skinparam NoteBackgroundColor #FFF7E3
+skinparam NoteFontColor #47B972
+skinparam NoteFontName Arial
+
+database SaaS {
+}
+
+database OnPremise {
+}
+
+cloud iPaaS {
+ artifact Workflows#gray {
+ [workflowN]
+ [workflow1]
+ }
+}
+
+database CloudData {
+}
+
+database IoT {  
+}
+
+SaaS <-down-> iPaaS
+OnPremise <-down-> iPaaS
+IoT <-up-> iPaaS
+CloudData <-up-> iPaaS
+
+@enduml
+

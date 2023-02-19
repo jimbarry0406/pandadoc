@@ -4,7 +4,7 @@
 
 skinparam sequenceMessageAlign center
 
-  Box iPaaS #E8F2FE
+  Box CRM AddOns #E8F2FE
     participant CustomPrograms1 order 1
   end Box
 
@@ -14,7 +14,7 @@ skinparam sequenceMessageAlign center
 	queue WebHook2 order 4
   end Box
 
-  Box CRM AddOns #E8F2FE
+  Box Payment Gateways #E8F2FE
     participant CustomPrograms2 order 5
   end Box
 
