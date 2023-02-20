@@ -12,7 +12,7 @@ folder Template {
   [**StaticContent**\nabc\nabc]
   [**Roles**]
   [**Settings**]
-  cloud Placeholders#Black {
+  cloud "Placeholders Data Merge"#Black {
 	entity data#Gray
     data --> [**Variables**]#DarkGray
       note bottom #FFF7E3
