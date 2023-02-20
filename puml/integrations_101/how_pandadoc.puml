@@ -18,12 +18,12 @@ skinparam sequenceMessageAlign center
     database DownStreamData order 5
   end Box
 
-	UpStreamData -[#red]> Templates : **INBOUND**\n//(Data)//<&paperclip>
+	UpStreamData -[#red]> Templates : **APIs**\n//( in )//
 
 	Templates --[#orange]> Documents
 	Documents --[#orange]> WebHooks : Status Change <&bell>
 
-	WebHooks -[#red]> DownStreamData : **OUTBOUND**\n//(Data)//<&paperclip>
+	WebHooks -[#red]> DownStreamData : **NOTIFICATIONS**\n//( out )//
 
 @enduml
 

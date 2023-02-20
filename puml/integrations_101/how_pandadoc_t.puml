@@ -12,14 +12,15 @@ folder Template {
   [**StaticContent**\nabc\nabc]
   [**Roles**]
   [**Settings**]
-  cloud Placeholders {
-    data --> [**Variables**]
+  cloud Placeholders#Black {
+	entity data#Gray
+    data --> [**Variables**]#DarkGray
       note bottom #FFF7E3
         inside Text Blocks, 
         using brackets syntax 
         [//VariableName//]
       end note
-    data --> [**FillableFields**]
+    data --> [**FillableFields**]#DarkGray
 	  note bottom #FFF7E3
 		<&arrow-circle-right> Text
 		<&arrow-circle-right> Date
@@ -27,7 +28,7 @@ folder Template {
 		<&arrow-circle-right> RadioButtons
 		<&arrow-circle-right> DropDown
 	  end note
-    data --> [**SmartLogic**]
+    data --> [**SmartLogic**]#DarkGray
       note bottom #FFF7E3
         **if** //<this>// **then show** //<that>//
       end note
