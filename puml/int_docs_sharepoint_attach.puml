@@ -10,6 +10,9 @@ autonumber
     participant Integrations order 3
    end Box
 
+skinparam actorBorderColor black
+skinparam actorBackgroundColor DarkSeaGreen
+
   actor Employee order 4
 
   Box Sharepoint #LightGray

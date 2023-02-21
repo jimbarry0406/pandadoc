@@ -4,6 +4,9 @@
 
 autonumber
 
+skinparam actorBorderColor black
+skinparam actorBackgroundColor DarkSeaGreen
+
   actor Employee order 1
 
   Box PandaDoc
