@@ -36,7 +36,7 @@ package Storage {
 
 cloud ProcessAutomations#Black {
  artifact Recipies#Gray {
- [...recipieN]#DarkGray
+ [recipieN]#DarkGray
  [recipie2]#DarkGray
  [recipie1]#DarkGray
  }
@@ -48,7 +48,7 @@ Storage <-up-> ProcessAutomations
 PD <-up-> ProcessAutomations
 
 recipie1 -[hidden]> recipie2
-recipie2 -[hidden]> ...recipieN
+recipie2 -[hidden]> recipieN
 
 @enduml
 
