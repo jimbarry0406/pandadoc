@@ -7,7 +7,7 @@ autonumber
   Box PandaDoc
     actor User order 1
     participant Document order 2
-    participant Integrations order 3
+    participant ProcessAutomations order 3
   end Box
 
   actor Candidate order 4
@@ -21,9 +21,9 @@ autonumber
   Candidate -> Document: Candidate Signs
 
   group#LightGray #FFF7E3 monitor
-    Integrations o<[#red]- Document : Status Changes to Complete
+    ProcessAutomations o<[#red]- Document : Status Changes to Complete
     autonumber stop
-      CandidateRecord <--[#red]o Integrations: Create new CandidateRecord 
+      CandidateRecord <--[#red]o ProcessAutomations: Create new CandidateRecord 
 	autonumber resume
   end
 

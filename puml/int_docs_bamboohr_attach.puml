@@ -7,7 +7,7 @@ autonumber
   Box PandaDoc
     actor User order 1
     participant Document order 2
-    participant Integrations order 3
+    participant ProcessAutomations order 3
   end Box
 
 skinparam actorBorderColor black
@@ -25,9 +25,9 @@ skinparam actorBackgroundColor DarkSeaGreen
   Employee -> Document: Employee Signs
 
   group#LightGray #FFF7E3 monitor
-    Integrations o<[#red]- Document : Status Changes to Complete
+    ProcessAutomations o<[#red]- Document : Status Changes to Complete
     autonumber stop
-    EmployeeRecord <--[#red]o Integrations: Attach PDF 
+    EmployeeRecord <--[#red]o ProcessAutomations: Attach PDF 
   end
 
 @enduml

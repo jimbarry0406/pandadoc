@@ -12,7 +12,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 4
-    participant Integrations order 5
+    participant ProcessAutomations order 5
   end Box
 
   User -> Deal: Initiates
@@ -24,8 +24,8 @@ autonumber
   autonumber resume
   
   group#LightGray #FFF7E3 monitor
-    Integrations o<[#red]- Document : Status Changes (Declined or Completed)
-    Deal <--[#red]o Integrations: Update Stage
+    ProcessAutomations o<[#red]- Document : Status Changes (Declined or Completed)
+    Deal <--[#red]o ProcessAutomations: Update Stage
   end
 
 @enduml

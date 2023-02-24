@@ -6,7 +6,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant DocumentActivity order 1
-    participant Integrations order 2
+    participant ProcessAutomations order 2
   end Box
 
   Box msDynamics
@@ -14,8 +14,8 @@ autonumber
   end Box
 
   group#LightGray #FFF7E3 monitor
-    Integrations <[#red]-o Integrations: pulls Activity Details
-    Integrations -[#red]> CrmObjects: Adds Note (Quote or opportunity)
+    ProcessAutomations <[#red]-o ProcessAutomations: pulls Activity Details
+    ProcessAutomations -[#red]> CrmObjects: Adds Note (Quote or opportunity)
   end
 
 @enduml

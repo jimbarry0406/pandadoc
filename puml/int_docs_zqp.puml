@@ -15,7 +15,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 8
-    participant Integrations order 7
+    participant ProcessAutomations order 7
   end Box
 
   User -> Deal: Initiates
@@ -29,8 +29,8 @@ autonumber
   PanadaDocAddOn -> Document: Create
   
   group#LightGray #FFF7E3 monitor
-    Document o-[#red]> Integrations: Status Changes
-    Integrations -[#red]> QuoteProducts: Update QuoteProducts
+    Document o-[#red]> ProcessAutomations: Status Changes
+    ProcessAutomations -[#red]> QuoteProducts: Update QuoteProducts
   end
 
 @enduml

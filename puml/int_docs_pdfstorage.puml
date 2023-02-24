@@ -6,7 +6,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 1
-    participant Integrations order 2
+    participant ProcessAutomations order 2
   end Box
 
   Box Storage
@@ -14,8 +14,8 @@ autonumber
   end Box
 
   group#LightGray #FFF7E3 monitor
-    Document -[#red]>o Integrations: Signed/Finished/Completed <&paperclip>
-    Integrations o-[#red]> Folders: Uploads PDF <&paperclip>
+    Document -[#red]>o ProcessAutomations: Signed/Finished/Completed <&paperclip>
+    ProcessAutomations o-[#red]> Folders: Uploads PDF <&paperclip>
   end
 
 @enduml

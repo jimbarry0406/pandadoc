@@ -6,7 +6,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 1
-    participant Integrations order 2
+    participant ProcessAutomations order 2
   end Box
 
   Box Zoho
@@ -14,8 +14,8 @@ autonumber
   end Box
 
   group#LightGray #FFF7E3 monitor
-    Document -[#red]>o Integrations: Status Changes (Sent or Completed)
-    Integrations o-[#red]> CrmObjects: Attach PDF to Deal or Quote <&paperclip>
+    Document -[#red]>o ProcessAutomations: Status Changes (Sent or Completed)
+    ProcessAutomations o-[#red]> CrmObjects: Attach PDF to Deal or Quote <&paperclip>
   end
 
 @enduml

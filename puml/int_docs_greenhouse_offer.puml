@@ -11,12 +11,12 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 5
-    participant Integrations order 6
+    participant ProcessAutomations order 6
   end Box
 
   group#LightGray #FFF7E3 monitor
-    Integrations o<[#red]- Document : Status Changes (Declined or Completed)
-    Offer <--[#red]o Integrations: Update Stage
+    ProcessAutomations o<[#red]- Document : Status Changes (Declined or Completed)
+    Offer <--[#red]o ProcessAutomations: Update Stage
   end
 
 @enduml

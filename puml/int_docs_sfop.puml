@@ -13,7 +13,7 @@ autonumber
 
   Box PandaDoc #WhiteSmoke
     participant Document order 6
-    participant Integrations order 5
+    participant ProcessAutomations order 5
   end Box
 
   User -> Opportunity: Initiates
@@ -26,8 +26,8 @@ autonumber
   PanadaDocAddOn -> Document: Create
   
   group#LightGray #FFF7E3 monitor
-    Integrations o<[#red]- Document : Status Changes (Sent or Completed)
-    OpportunityProducts <[#red]-o Integrations : Update OpportunityProducts
+    ProcessAutomations o<[#red]- Document : Status Changes (Sent or Completed)
+    OpportunityProducts <[#red]-o ProcessAutomations : Update OpportunityProducts
   end
 
 @enduml
