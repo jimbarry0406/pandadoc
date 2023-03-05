@@ -24,7 +24,8 @@ skinparam ActorFontColor DarkOrange
   group#LightGray #FFF7E3 iFramed JS reference to PandaDoc.DocEditor()
 
     PandaDocDocument <[#blue]-> User : User Interface Interactions //(through iFrame)//
-  
+      note left: picks template,\nassigns roles,\nedits Documents,\nsends Document.
+
     CustomWebApp <--[#DarkOrange]--o PandaDocDocument  : JavaScript Events //(Optional)// <&bell>
 
   end group

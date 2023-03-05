@@ -23,7 +23,8 @@ skinparam ActorFontColor DarkOrange
   group#LightGray #FFF7E3 iFramed JS reference to PandaDoc.DocList()
 
     PandaDocListDocs <[#blue]-> User : User Interface Interactions //(through iFrame)//
-  
+        note left: view,\nscroll.
+
     CustomWebApp <--[#DarkOrange]--o PandaDocListDocs  : JavaScript Events //(Optional)// <&bell>
 
   end group
