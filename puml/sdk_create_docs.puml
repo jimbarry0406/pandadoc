@@ -17,7 +17,8 @@ skinparam ActorFontColor DarkOrange
   User -> CustomWebApp : Logs in
 
   autonumber stop
-    User -> User : Triggers Document View/Edit Feature
+    User -> User : Triggers Document Create Feature
+	CustomWebApp -> CustomWebApp : Data Merge (optional)
   autonumber resume
 
   group#LightGray #FFF7E3 iFramed JS reference to PandaDoc.DocEditor()
