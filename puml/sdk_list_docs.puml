@@ -26,6 +26,7 @@ skinparam ActorFontColor DarkOrange
         note left: view,\nscroll.
 
     CustomWebApp <--[#DarkOrange]--o PandaDocListDocs  : JavaScript Events //(Optional)// <&bell>
+      note left: onInit()
 
   end group
 

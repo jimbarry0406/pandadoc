@@ -27,6 +27,7 @@ skinparam ActorFontColor DarkOrange
       note left: picks template,\nassigns roles,\nedits Documents,\nsends Document.
 
     CustomWebApp <--[#DarkOrange]--o PandaDocDocument  : JavaScript Events //(Optional)// <&bell>
+      note left: onInit(),\nonDocumentCreate(),\nonDocumentSent(),\nonClose()
 
   end group
 
