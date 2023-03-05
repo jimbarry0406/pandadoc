@@ -12,19 +12,19 @@ skinparam ActorFontColor DarkOrange
   actor User order 0
 
   participant CustomWebApp order 1
-  participant PandaDocListDocs order 2
+  participant PandaDocDocument order 2
 
   User -> CustomWebApp : Logs in
 
   autonumber stop
-    User -> User : Triggers Document List Feature
+    User -> User : Triggers Document View/Edit Feature
   autonumber resume
 
-  group#LightGray #FFF7E3 iFramed JS reference to PandaDoc.DocList()
+  group#LightGray #FFF7E3 iFramed JS reference to PandaDoc.DocEditor()
 
-    PandaDocListDocs <[#blue]-> User : User Interface Interactions //(through iFrame)//
+    PandaDocDocument <[#blue]-> User : User Interface Interactions //(through iFrame)//
   
-    CustomWebApp <--[#DarkOrange]--o PandaDocListDocs  : JavaScript Events //(Optional)// <&bell>
+    CustomWebApp <--[#DarkOrange]--o PandaDocDocument  : JavaScript Events //(Optional)// <&bell>
 
   end group
 
