@@ -11,10 +11,10 @@ skinparam ActorFontColor DarkOrange
 
   actor User order 0
 
-  participant CustomWebApp order 1
+  participant CustomWebPage order 1
   participant PandaDocForm order 2
 
-  User -> CustomWebApp : Logs in
+  User -> CustomWebPage : Visits
 
   autonumber stop
     User -> User : Triggers Form Collection Feature
@@ -24,7 +24,7 @@ skinparam ActorFontColor DarkOrange
 
     PandaDocForm <[#blue]-> User : Data Collection //(through iFrame)//
   
-    CustomWebApp <--[#DarkOrange]--o PandaDocForm  : JavaScript Events //(Optional)// <&bell>
+    CustomWebPage <--[#DarkOrange]--o PandaDocForm  : JavaScript Events //(Optional)// <&bell>
 
   end group
 
