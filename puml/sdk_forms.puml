@@ -25,7 +25,8 @@ skinparam ActorFontColor DarkOrange
     PandaDocForm <[#blue]-> User : Data Collection //(through iFrame)//
   
     CustomWebPage <--[#DarkOrange]--o PandaDocForm  : JavaScript Events //(Optional)// <&bell>
-
+      note left: loaded(),\nstarted(),\ncompleted(),\nexception()
+	
   end group
 
 @enduml
