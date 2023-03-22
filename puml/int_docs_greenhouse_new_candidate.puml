@@ -18,7 +18,6 @@ autonumber
 
   User -> Document: Creates
   Document --> Document: Send
-  Candidate -> Document: Candidate Signs
 
   group#LightGray #FFF7E3 monitor
     ProcessAutomations o<[#red]- Document : Status Changes to Complete
