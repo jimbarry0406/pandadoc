@@ -14,11 +14,11 @@ autonumber
 
   User -> Job : Create Job
   Job -> Candidate : Create Candidate
-  Candidate -> Application : Create (Candidate) Application (to Job)
-  Application -> Application : Move Stage from Review to Offer
+  Candidate -> Application : Link Candidate to Job (an "Application")
+  Application -> Application : Move (Job) Stage from Review to Offer
   Application -> Offer : Create Offer Record
 
-  Offer -> Offer  : Document job-id, \ncondidate-id, and application-id
+  Offer -> Offer  : Document Reference Data:\n * job-id,\n * req-id,\n * condidate-id,\n * application-id
 
   Box PandaDoc #WhiteSmoke
     participant Document order 5
