@@ -18,7 +18,7 @@ autonumber
   Application -> Application : Move (Job) Stage from Review to Offer
   Application -> Offer : Create Offer Record
 
-  Offer -> Offer  : Document Reference Data:\n * job-id,\n * req-id,\n * condidate-id,\n * application-id
+  Offer -> Offer  : Document Reference Data: Job Title
 
   Box PandaDoc #WhiteSmoke
     participant Document order 5
@@ -30,7 +30,7 @@ autonumber
 
   group#LightGray #FFF7E3 monitor
     ProcessAutomations o<[#red]- Document : Candidate Recipient Signs
-    Offer <--[#red]o ProcessAutomations: Update Application Stage, Job is Closed
+    Offer <--[#red]o ProcessAutomations: Update Application Stage, Candidate is marked as [Hired]
   end
 
 @enduml
